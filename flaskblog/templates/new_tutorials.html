@@ -1,0 +1,26 @@
+ {% extends "layout.html" %}
+{% block content %}
+    <h1>New Tutorial</h1>
+    <form name="new_tutorial_form" id="tutorial" data-netlify="true" method="POST" class="forums-login-form">
+      <h4>Fill form to submit new tutorial</h4>
+
+      <div style="padding: 5px;" class="login-username login-field">
+        <label for="user_login" class="screen-reader">Heading</label>
+        <input type="text" name="log" id="Heading" class="input" value="" size="20" placeholder="Tutorial Heading"><br>
+      </div>
+      <div style="padding: 5px;" class="login-password login-field">
+        <label for="user_pass" class="screen-reader">Password</label>
+        <textarea class="input" rows = "5" cols = "60" name = "description" placeholder="Tutorial Description"></textarea><br>
+      </div>
+      <div style="padding: 5px;" class="login-password login-field">
+        <label for="user_pass" class="screen-reader">Password</label>
+        <textarea class="input" name="Tags" cols="20" rows="2" placeholder="Tags eg Grasshopper, Rhino, computation..."></textarea><br>
+      </div>
+
+      <div class="login-submit">
+        <input type="hidden" name="redirect_to" value="/forums/">
+        <input type="submit" name="wp-submit" id="wp-submit" class="button" value="Submit Article">
+      </div>
+
+    </form>
+{% endblock content %}

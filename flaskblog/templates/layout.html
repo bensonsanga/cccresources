@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width">
+  {% if title %}
+      <title>CC-{{ title }}</title>
+  {% else %}
+      <title>CC-Resources</title>
+  {% endif %}
+ <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='community/main.css') }}"> -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta property="fb:pages" content="124436167285">
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="CSS-Tricks Search">
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/CssTricks">
+  <link rel="preload" href="/wp-content/themes/CSS-Tricks-17/fonts/Rubik-Bold-kern-latin.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/wp-content/themes/CSS-Tricks-17/fonts/Rubik-Regular-kern-latin.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="shortcut icon" href="/static/title.png" />
+  <style>
+    @font-face {
+      font-family: Rubik;
+      src:
+        url(https://css-tricks.com/wp-content/themes/CSS-Tricks-17/fonts/Rubik-Bold-kern-latin.woff2) format("woff2"),
+        url(https://css-tricks.com/wp-content/themes/CSS-Tricks-17/fonts/Rubik-Bold-kern-latin.woff) format("woff");
+      font-weight: 700;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: Rubik;
+      src:
+        url(https://css-tricks.com/wp-content/themes/CSS-Tricks-17/fonts/Rubik-Regular-kern-latin.woff2) format("woff2"),
+        url(https://css-tricks.com/wp-content/themes/CSS-Tricks-17/fonts/Rubik-Regular-kern-latin.woff) format("woff");
+      font-weight: 400;
+      font-display: swap;
+    }
+  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='community/CSS-Tricks_files/style.css') }}">
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="{{ url_for('static', filename='community/CSS-Tricks_files/style.min.css') }}" type="text/css" media="all">
+<link rel="stylesheet" id="bbp-default-css" href="{{ url_for('static', filename='community/CSS-Tricks_files/bbpress.css') }}" type="text/css" media="screen">
+<link rel="stylesheet" id="jetpack-search-widget-css" href="{{ url_for('static', filename='community/CSS-Tricks_files/search-widget-frontend.css') }}" type="text/css" media="all">
+<script src="{{ url_for('static', filename='community/CSS-Tricks_files/jquery-3.3.1.min.js.download') }}"></script>
+<style type="text/css">img#wpstats{display:none}</style>
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed, .fluid-width-video-wrapper video {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+
+<body class="home blog header-not-at-top" id="top">
+
+  <a id="skip-nav" class="skip-nav screen-reader-text" href="/#maincontent">Skip to main content</a>
+
+  <div id="top-of-site-pixel-anchor"></div>
+
+  <header class="site-header" id="site-header">
+
+  <div class="logo">
+    <a href="{{ url_for('main.home') }}">
+      <div class="screen-reader-text">CC-Resources</div>
+      <svg class="icon-logo-star" width="35px" height="35px">
+        <use xlink:href="#icon-logo-star"></use>
+      </svg>
+      <!-- 288 35 -->
+      <svg class="icon-logo-text" width="214px" height="45px">
+        <use xlink:href="#logo"></use>
+      </svg>
+    </a>
+  </div>
+
+  <div class="header-middle-area">
+
+    <nav class="main-nav" id="main-nav">
+
+  <ul class="main-sections">
+    <li class="articles">
+      <a href="{{ url_for('main.entourage') }}">
+        <svg class="icon-nav-articles" width="26px" height="26px">
+          <use xlink:href="#icon-nav-articles"></use>
+        </svg>
+        <span>Entourage</span>
+      </a>
+    </li>
+    <li class="videos">
+      <a href="{{ url_for('main.tutorials') }}">
+        <svg class="icon-nav-video" width="26px" height="26px">
+          <use xlink:href="#icon-nav-videos"></use>
+        </svg>
+        <span>Tutorials</span>
+      </a>
+    </li>
+    <li class="almanac">
+      <a href="{{ url_for('main.dwg') }}">
+        <svg class="icon-nav-almanac" width="26px" height="26px">
+          <use xlink:href="#icon-nav-almanac"></use>
+        </svg>
+        <span>Catalogue</span>
+      </a>
+    </li>
+    <li class="snippets">
+      <a href="{{ url_for('main.scripts') }}">
+        <svg class="icon-nav-snippets" width="26px" height="26px">
+          <use xlink:href="#icon-nav-snippets"></use>
+        </svg>
+        <span>Scripts</span>
+      </a>
+    </li>
+    <li class="newsletter">
+      <a href="{{ url_for('main.models') }}">
+        <svg class="icon-nav-newsletter" width="26px" height="26px">
+          <use xlink:href="#icon-nav-newsletter"></use>
+        </svg>
+        <span>News Letter</span>
+      </a>
+    </li>
+    <li class="jobs">
+      <a href="{{ url_for('main.icons') }}">
+        <svg class="icon-nav-jobs" width="26px" height="26px">
+          <use xlink:href="#icon-nav-jobs"></use>
+        </svg>
+        <span>Projects</span>
+      </a>
+    </li>
+    <li class="guides">
+      <a href="{{ url_for('main.maps') }}">
+        <svg class="icon-nav-guides" width="26px" height="26px">
+          <use xlink:href="#icon-nav-guides"></use>
+        </svg>
+        <span>Maps</span>
+      </a>
+    </li>
+  </ul>
+
+  <hr class="squiggle">
+
+  <div class="mobile-other-nav">
+    <a href="/#top">Back to Top</a>
+    <a href="/contact/">Contact</a>
+    <a href="/about/">About</a>
+    <a href="/archives/">Archives</a>
+    <a href="/advertising/">Advertise</a>
+    <a href="/jobs/">Jobs</a>
+    <a href="/license/">License</a>
+    <a href="/subscription-options/">Subscribe</a>
+    <a href="/forums/">Forums</a>
+    <a href="/guest-posting/">Guest Posting</a>
+  </div>
+
+  <div class="mobile-social">
+    <a href="https://www.facebook.com/" class="social-link-facebook">
+       <span class="screen-reader-text">Facebook</span>
+       <svg class="logo-facebook" width="20px" height="20px">
+         <use xlink:href="#logo-facebook"></use>
+       </svg>
+    </a>
+
+    <a href="https://twitter.com/ymcmbennie" class="social-link-twitter">
+       <span class="screen-reader-text">Twitter</span>
+       <svg class="logo-twitter" width="20px" height="20px">
+         <use xlink:href="#logo-twitter"></use>
+       </svg>
+    </a>
+
+    <a href="https://www.youtube.com/channel/UCsdw22BlyJn07Vdt3ZulBjw" class="social-link-youtube">
+       <span class="screen-reader-text">YouTube</span>
+       <svg class="logo-youtube" width="20px" height="20px">
+         <use xlink:href="#logo-youtube"></use>
+       </svg>
+    </a>
+
+    <a href="https://www.behance.net/bensonsang34cd" class="social-link-spectrum">
+       <span class="screen-reader-text">Behance</span>
+       <svg class="logo-spectrum" width="20px" height="20px">
+         <use xlink:href="#logo-spectrum"></use>
+       </svg>
+    </a>
+
+    <a href="https://www.instagram.com/benson.a.d/?hl=en" class="social-link-rss">
+       <span class="screen-reader-text">Instagram</span>
+       <svg class="logo-rss" width="20px" height="20px">
+         <use xlink:href="#logo-rss"></use>
+       </svg>
+    </a>
+  </div>
+
+</nav>
+  </div>
+
+  <div class="search" role="search" id="search-area">
+                  <div class="chw-widget"><form role="search" method="get" id="searchform" class="search-form" action="/">
+
+  <label class="screen-reader-text" id="search-label" for="search-input">Search for:</label>
+
+  <input type="search" required="" name="s" id="search-input" class="search-field" placeholder="Well thid id not working yet" value="">
+
+    <input type="hidden" name="orderby" value="relevance">
+  <input type="hidden" name="post_type" value="post,page,guide">
+
+  <button type="submit" class="button-invisible">
+    <span class="screen-reader-text">Search</span>
+    <svg class="icon-search" width="26px" height="26px">
+      <use xlink:href="#icon-search"></use>
+    </svg>
+  </button>
+
+</form></div>            </div>
+
+  <div class="mobile-actions" id="mobile-actions">
+
+    <button class="search-opener" id="search-opener">
+      <span class="screen-reader-text">Open Search</span>
+      <svg class="icon-search" width="26px" height="26px">
+        <use xlink:href="#icon-search"></use>
+      </svg>
+    </button>
+
+    <button id="mobile-nav-button" class="mobile-nav-button">
+      <span class="screen-reader-text">Open Navigation</span>
+      <svg class="icon-burger" width="28px" height="28px">
+        <use xlink:href="#icon-burger"></use>
+      </svg>
+      <svg class="icon-close" width="28px" height="28px">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+
+  </div>
+
+</header>
+
+      <div class="all-site-wrap" id="all-site-wrap">
+
+<main class="page-wrap page-wrap-home" id="maincontent">
+
+
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+{% block content %}{% endblock %}
+
+
+
+
+  <article class="hero-article">
+
+    <style>
+      .hero-article::after {
+        content: "";
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        z-index: -1;
+        background-image:
+          radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.75), #100e17),
+          url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ae172664395233.5ad22fa0d6529.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.75;
+      }
+    </style>
+
+</div>
+  </div>
+  <footer class="site-footer footer-newsletter">
+
+    <div class="footer-newsletter-inside">
+      <hr class="thick">
+
+      <h2>How do you stay up to date in this fast⁠-⁠moving&nbsp;industry?</h2>
+
+      <p>A good start is to sign up for our weekly hand-written newsletter. We bring you the best articles and ideas from around the web, and what we think about them.</p>
+
+      <div id="footer-form-wrap">
+
+  <form action="https://twitter.us19.list-manage.com/subscribe/post?u=37b5e38441c296e9693990744&amp;id=e339b4f82a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+
+    <div class="subwrap">
+      <div class="inner-sub">
+        <div class="submarine">
+          <div class="porthole"></div>
+          <div class="porthole"></div>
+          <div class="fin"></div>
+          <div class="fin lower"></div>
+          <div class="periscope"></div>
+          <div class="prop"></div>
+          <label for="mce-EMAIL" class="screen-reader">Email Address</label>
+          <input type="email" name="EMAIL" class="required email mailchimp-email-input" id="mce-EMAIL" placeholder="prodesign@ccresources.com" required="">
+          <div class="inner"></div>
+        </div>
+
+        <div class="btnwrap">
+          <b>
+            <span>Subscribe</span>
+          </b>
+          <input type="submit" value="Subscribe" name="Subscribe" id="mc-embedded-subscribe" class="button subscribe-button">
+        </div>
+
+      </div>
+    </div>
+  </form>
+</div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/CSSTricks/" class="social-link-facebook">
+          <strong>Facebook</strong>
+          <span>Benson Sanga</span>
+        </a>
+
+        <a href="https://twitter.com/ymcmbennie" class="social-link-twitter">
+          <strong>Twitter</strong>
+          <span>ymcmbennie</span>
+        </a>
+
+        <a href="https://www.youtube.com/user/realcsstricks" class="social-link-youtube">
+          <strong>YouTube</strong>
+          <span>Benson Sanga</span>
+        </a>
+
+        <a href="https://spectrum.chat/css-tricks" class="social-link-spectrum">
+          <strong>Behance</strong>
+          <span>bensonsang34cd</span>
+        </a>
+
+        <a href="/feed/" class="social-link-rss">
+          <strong>Instagram</strong>
+          <span>Benson.A.D</span>
+        </a>
+      </div>
+    </div>
+
+  </footer>
+
+  <div class="footer-colophon-wrapper">
+    <footer class="site-footer footer-colophon">
+
+      <div>
+        <h4>👋 </h4>
+        <p>CC-Resources<span>*</span> is created, written by, and maintained by <a href="https://ymcmbennie.github.io/portfolio/">Benson Sanga</a> and <a href="/about/">a team</a> of swell people. It is built on WordPress and powered up by <a href="/jetpack/">Jetpack</a>. It is made possible through <a href="/advertising/">sponsorships</a> from products and services we like.</p>
+
+        <p class="mega-big-time-warning"><small><span>*</span>May or may not contain any actual "CSS" or "Tricks".</small></p>
+      </div>
+
+      <nav>
+        <h4>Other Nav</h4>
+        <a href="/contact/">Contact</a>
+        <a href="/about/">About</a>
+        <a href="/forums/">Forums</a>
+        <a href="/advertising/">Advertise</a>
+        <a href="/license/">License</a>
+        <a href="/subscription-options/">Subscribe</a>
+        <a href="/guest-posting/">Guest Posting</a>
+        <a href="/authors/">All Authors</a>
+        <a href="">Conferences</a>
+        <a href="">Serverless</a>
+      </nav>
+
+    </footer>
+  </div>
+
+  <footer class="site-footer footer-partners">
+
+    <div class="footer-partner footer-partner-codepen">
+
+      <div>
+        <a href="https://codepen.io/hello">
+          <svg class="codepen-logo" viewBox="0 0 138 26" width="100%" height="100%"><path d="M15 8a7 7 0 1 0 0 10m7-8.7L33 2l11 7.3v7.4L33 24l-11-7.3zm0 0l11 7.4 11-7.4m0 7.4L33 9.3l-11 7.4M33 2v7.3m0 7.4V24M52 6h5a7 7 0 0 1 0 14h-5zm28 0h-9v14h9m-9-7h6m11 1h6a4 4 0 0 0 0-8h-6v14m26-14h-9v14h9m-9-7h6m11 7V6l11 14V6"></path></svg>          <span class="screen-reader-text">CodePen</span>
+        </a>
+        <p class="bold-underline-links">
+          <a href="https://codepen.io/hello">CC-Resources</a> is a place to experiment, debug, and show off your HTML, CSS, and JavaScript creations.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-partner footer-partner-mediatemple">
+      <div>
+        <a href="https://mediatemple.net/landing/csstricks/?utm_source=CSS-Tricks&amp;utm_medium=display&amp;utm_campaign=heaeder-box">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.56 32.15"><title>mt</title><path d="M16.45,9.77V11.7h.11a17.4,17.4,0,0,1,9.19-2.25c5.78,0,7.74,1.65,8.5,2.25a17.37,17.37,0,0,1,9.12-2.25c9.83,0,9.83,3.87,9.83,5.44V24H45.28V15.89c0-1.69,0-3.56-4.22-3.56-2.08,0-4.22.64-5,1.57a4.23,4.23,0,0,0-1,3.27V24H27.19V16.21c0-2.42.06-3.88-4.1-3.88-2.08,0-4.22.55-5,1.38-.63.63-1,1.29-1,3.39V24H9.11V9.77Z" fill="#fff"></path><path d="M72.29,12.93H66.54v5.71c0,2,0,2.67,2.35,2.67A16.34,16.34,0,0,0,72,21l.25,0,.74,2.9a41.33,41.33,0,0,1-6.67.57c-2.59,0-5.93-.39-7.17-1.45-1-.87-1.17-1.72-1.17-3.88V12.93H54.13V10H58V7.13l8.52-2.21v5h5.75Z" fill="#fff"></path><path d="M5.24,32.08A29.62,29.62,0,0,1,0,16,28.12,28.12,0,0,1,5.3,0H8.48c-2.36,5.23-4,9.68-4,16.15A36.72,36.72,0,0,0,8.35,31.87a.79.79,0,0,1,.1.21Z" fill="#fff"></path><path d="M76.33.07a29.64,29.64,0,0,1,5.23,16.08,28,28,0,0,1-5.3,16H73.08c2.36-5.24,4-9.68,4-16.14A36.79,36.79,0,0,0,73.22.27a.47.47,0,0,1-.1-.2Z" fill="#fff"></path></svg>        </a>
+        <p class="bold-underline-links">
+          <a href="https://mediatemple.net/landing/csstricks/?utm_source=CSS-Tricks&amp;utm_medium=display%20y&amp;utm_campaign=heaeder-box">MediaTemple</a> has been CSS-Tricks web host since day one. Save 20% with code <strong>CSSTRICKS</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-partner footer-partner-shoptalk">
+
+      <div>
+        <a href="https://shoptalkshow.com/"><img class="shoptalk-img" src="./CSS-Tricks_files/shoptalk_logo.png" alt="ShopTalk Show"></a>
+        <p class="bold-underline-links">
+          <a href="https://shoptalkshow.com/">ShopTalk</a> is a podcast all about front-end web design and development.
+        </p>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<clippath id="a"><path fill="#fff" d="M0 0h40v40H0z"></path></clippath>
+<clippath id="a"><path fill="#fff" d="M0 0h40v40H0z"></path></clippath>
+<clippath id="a"><path fill="#fff" d="M0 0h40v40H0z"></path></clippath>
+<clippath id="a"><path fill="#fff" d="M0 0h40v40H0z"></path></clippath>
+<clippath id="a"><path fill="#fff" d="M0 0h40v40H0z"></path></clippath>
+</defs>
+<symbol id="half-circle" viewBox="0 0 106 57"><path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path></symbol>
+<symbol id="icon-burger" viewBox="0 0 24 24"><rect y="2" width="24" height="2" rx="1"></rect><rect y="20" width="24" height="2" rx="1"></rect><rect y="8" width="24" height="2" rx="1"></rect><rect y="14" width="24" height="2" rx="1"></rect></symbol>
+<symbol id="icon-close" viewBox="0 0 95.08 95.09"><path d="M58.31 47.47l34.58-34.58a7.63 7.63 0 0 0 0-10.69 7.63 7.63 0 0 0-10.69 0L47.62 36.78 13 2.19a7.63 7.63 0 0 0-10.69 0 7.63 7.63 0 0 0 0 10.69l34.6 34.6L2.33 82.07a7.29 7.29 0 0 0 0 10.69 7.63 7.63 0 0 0 10.69 0l34.6-34.6 34.6 34.6a7.27 7.27 0 0 0 10.68 0 7.63 7.63 0 0 0 0-10.69z"></path></symbol>
+<symbol id="icon-globe" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></symbol>
+<symbol id="icon-itunes" viewBox="0 0 171.75 171.75"><path d="M85.88 0a85.88 85.88 0 1 0 85.87 85.88A85.88 85.88 0 0 0 85.88 0zm38.52 24.27a3.64 3.64 0 0 1 3.67 2.81c.18.62.22 12 .18 45.45l-.07 44.61-.46 1.67a15.89 15.89 0 0 1-11 11.32c-3.88 1.16-9.57 1.6-12.36.94a12.2 12.2 0 0 1-6.26-3.61 12.82 12.82 0 0 1-4.14-9.6 12.4 12.4 0 0 1 1.37-5.81 12.67 12.67 0 0 1 6.53-6.44c2.64-1.32 5-2 11.88-3.44 4.52-1 5.62-1.35 6.5-2.4 1.21-1.44 1.19-.91 1.13-23.74-.06-19.83-.08-20.92-.44-21.47a2.86 2.86 0 0 0-2.83-1.07c-1.25.18-45.76 9.18-46.87 9.48a3.37 3.37 0 0 0-2.41 2.65c-.17.79-.24 9.55-.24 31.1 0 33.1 0 32.35-1.3 35.86a19.24 19.24 0 0 1-1.5 3.08 18.11 18.11 0 0 1-5 4.85c-4.06 2.4-12 3.64-16.25 2.53a13.17 13.17 0 0 1-9.35-8.56 16.44 16.44 0 0 1-.38-7.75 13.11 13.11 0 0 1 3.41-6.32c2.91-2.92 6.36-4.29 15.63-6.17 2-.41 4.07-.89 4.59-1.06a5.31 5.31 0 0 0 2.84-2.69c.35-.79.38-2.71.48-35.78l.1-34.95.49-1a5.88 5.88 0 0 1 3-2.73c.79-.3 47-9.72 54.86-11.18a37.21 37.21 0 0 1 4.2-.58z"></path></symbol>
+<symbol id="icon-link" viewBox="0 0 100 58.84"><title>icon-link</title><path d="M78.47 48H49.21a10.66 10.66 0 0 1-9-4.91h10.58A21.57 21.57 0 0 0 71.7 26.64h6.76a10.67 10.67 0 0 1 0 21.33zm-67.6-26.47a10.67 10.67 0 0 1 10.67-10.66H50.8A10.59 10.59 0 0 1 58.34 14a10.94 10.94 0 0 1 1.43 1.79H49.21a21.57 21.57 0 0 0-20.92 16.4h-6.76a10.67 10.67 0 0 1-10.66-10.66zm39.92 10.66H39.86a10.68 10.68 0 0 1 9.35-5.54h10.93a10.67 10.67 0 0 1-9.35 5.54zM100 37.31a21.53 21.53 0 0 0-21.53-21.53h-6.92A21.53 21.53 0 0 0 50.8 0H21.54a21.53 21.53 0 0 0 0 43.06h6.83v-.31A21.41 21.41 0 0 0 34 52.53a21.4 21.4 0 0 0 15.2 6.31h29.26A21.56 21.56 0 0 0 100 37.31z"></path></symbol>
+<symbol id="icon-logo-star" viewBox="0 0 362.62 388.52"><title>icon-logo-star</title><path d="M156.58 239l-88.3 64.75c-10.59 7.06-18.84 11.77-29.43 11.77-21.19 0-38.85-18.84-38.85-40 0-17.69 14.13-30.64 27.08-36.52l103.6-44.74-103.6-45.92C13 142.46 0 129.51 0 111.85 0 90.66 18.84 73 40 73c10.6 0 17.66 3.53 28.25 11.77l88.3 64.75-11.74-104.78C141.28 20 157.76 0 181.31 0s40 18.84 36.5 43.56L206 149.52l88.3-64.75C304.93 76.53 313.17 73 323.77 73a39.2 39.2 0 0 1 38.85 38.85c0 18.84-12.95 30.61-27.08 36.5l-103.61 45.91L335.54 239c14.13 5.88 27.08 18.83 27.08 37.67 0 21.19-18.84 38.85-40 38.85-9.42 0-17.66-4.71-28.26-11.77L206 239l11.77 104.78c3.53 24.72-12.95 44.74-36.5 44.74s-40-18.84-36.5-43.56z"></path></symbol>
+<symbol id="icon-nav-almanac" viewBox="0 0 36 40"><path d="M31 39H9V1h22c2.2 0 4 1.8 4 4v30c0 2.2-1.8 4-4 4zM9 1H1v38h8V1zM2 10h7M2 14h7"></path><path d="M28 16l-4-4-4 4V1h8v15z"></path></symbol>
+<symbol id="icon-nav-articles" viewBox="0 0 40 40"><path d="M24.9 6H9.1C7.9 6 7 6.9 7 8.1V16c0 1.2.9 2.1 2.1 2.1h15.8c1.2 0 2.1-.9 2.1-2.1V8.1c0-1.2-.9-2.1-2.1-2.1z"></path><path d="M33.2 4H37c1.1 0 2 .9 2 2v29.2c0 2.1-1.7 3.8-3.8 3.8H4.8C2.7 39 1 37.3 1 35.2V4.8C1 2.7 2.7 1 4.8 1H29c2.2 0 4 1.8 4 4v28c0 1.7 1.3 3 3 3s3-1.3 3-3V9M7 23h20M7 28h20M7 33h20"></path></symbol>
+<symbol id="icon-nav-guides" viewBox="0 0 40 40"><g clip-path="url(#a)"><path d="M6.2 37.4L14 35V1L3.8 4.1C2.1 4.7 1 6.2 1 7.9v25.7c0 2.7 2.6 4.6 5.2 3.8zM26 39l10.2-3.1c1.7-.5 2.8-2.1 2.8-3.8V5c0-2.7-2.6-4.6-5.1-3.8L26 3.6V39zM14 1l12 3M14 35l12 4"></path></g></symbol>
+<symbol id="icon-nav-jobs" viewBox="0 0 40 40"><g clip-path="url(#a)"><path d="M39 23l-19 4-19-4V12c0-2.2 1.8-4 4-4h30c2.2 0 4 1.8 4 4v11z"></path><path d="M38 24v11c0 2.2-1.8 4-4 4H6c-2.2 0-4-1.8-4-4V24M32 8H7V5c0-2.2 1.8-4 4-4h17c2.2 0 4 1.8 4 4v3z"></path><path d="M15 27c0 2.75 2.25 5 5 5s5-2.25 5-5"></path></g></symbol>
+<symbol id="icon-nav-newsletter" viewBox="0 0 40 40"><g clip-path="url(#a)"><path d="M35 39H5c-2.2 0-4-1.8-4-4V19l19 9 19-9v16c0 2.2-1.8 4-4 4zM2 38l12-13M38 38L26 25M33.2 15l5.8 4M1 19l5.8-4"></path><path d="M7 22V5c0-2.2 1.8-4 4-4h18c2.2 0 4 1.8 4 4v17"></path><path d="M26 13c0 3.3-2.7 6-6 6s-6-2.7-6-6"></path></g></symbol>
+<symbol id="icon-nav-snippets" viewBox="0 0 40 40"><g clip-path="url(#a)"><path d="M17.2 37.8l-15-15c-1.6-1.6-1.6-4.1 0-5.7l15-15c1.6-1.6 4.1-1.6 5.7 0l15 15c1.6 1.6 1.6 4.1 0 5.7l-15 15c-1.6 1.6-4.2 1.6-5.7 0z"></path><path d="M14 16l-4 4 4 4M26 24l4-4-4-4M21 16l-2 8"></path></g></symbol>
+<symbol id="icon-nav-videos" viewBox="0 0 40 40"><g clip-path="url(#a)"><path d="M20 39c10.493 0 19-8.507 19-19S30.493 1 20 1 1 9.507 1 20s8.507 19 19 19z"></path><path d="M20 33c7.18 0 13-5.82 13-13S27.18 7 20 7 7 12.82 7 20s5.82 13 13 13z"></path><path d="M17.1 17v6.6c0 .8.8 1.2 1.5.9l6-3.3c.7-.4.7-1.4 0-1.7l-6-3.3c-.7-.4-1.5 0-1.5.8z"></path></g></symbol>
+<symbol id="icon-pin" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.727 2A4.727 4.727 0 0 0 4 6.727c0 1.826 1.198 3.65 2.59 5.12a18.357 18.357 0 0 0 2.137 1.917 18.36 18.36 0 0 0 2.138-1.918c1.392-1.469 2.59-3.293 2.59-5.119A4.727 4.727 0 0 0 8.726 2zm0 13l-.555.832-.002-.002-.005-.003-.016-.01a6.814 6.814 0 0 1-.253-.18 20.364 20.364 0 0 1-2.758-2.416C3.666 11.669 2 9.357 2 6.728a6.727 6.727 0 1 1 13.454 0c0 2.63-1.665 4.941-3.137 6.495a20.366 20.366 0 0 1-2.956 2.556 6.845 6.845 0 0 1-.055.038l-.016.01-.005.004-.002.001s-.001.001-.556-.831zm0 0l.555.832a1 1 0 0 1-1.11 0L8.727 15z"></path><path d="M8.727 8.637a1.91 1.91 0 1 0 0-3.819 1.91 1.91 0 0 0 0 3.819z"></path></symbol>
+<symbol id="icon-play" viewBox="0 0 32 32"><path clip-rule="evenodd" d="M27.25 16c0 6.213-5.037 11.25-11.25 11.25S4.75 22.213 4.75 16 9.787 4.75 16 4.75 27.25 9.787 27.25 16zM16 31c8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15C7.716 1 1 7.716 1 16c0 8.284 6.716 15 15 15zm-1.657-19.744c-1.002-.668-2.343.05-2.343 1.253v7.63c0 1.204 1.341 1.922 2.343 1.254l5.722-3.815a1.507 1.507 0 0 0 0-2.508l-5.722-3.814z"></path></symbol>
+<symbol id="icon-search" viewBox="0 0 100 100"><title>icon-search</title><path d="M80.65 66.78a33.55 33.55 0 0 1-47.44-47.44 33.55 33.55 0 1 1 47.44 47.44zm6.73-54.16a43.06 43.06 0 0 0-65.32 55.71L2 88.39A6.8 6.8 0 0 0 11.61 98l20.06-20.06a43.06 43.06 0 0 0 55.71-65.32z"></path></symbol>
+<symbol id="icon-star" viewBox="0 0 100 95.52"><title>icon-star</title><g data-name="Layer 2"><path d="M64.19 28.77a5.17 5.17 0 0 0 3.9 2.83s29.27-3 31.74 4.61-23 22.39-23 22.39a5.17 5.17 0 0 0-1.49 4.58s11.91 26.9 5.42 31.61S52.4 79.87 52.4 79.87a5.21 5.21 0 0 0-2.41-.6 5.14 5.14 0 0 0-2.41.6S25.68 99.5 19.2 94.79s5.42-31.61 5.42-31.61a5.18 5.18 0 0 0-1.49-4.58S-2.31 43.83.17 36.21s31.74-4.61 31.74-4.61a5.19 5.19 0 0 0 3.9-2.83S42 0 50 0s14.19 28.77 14.19 28.77z" data-name="Layer 1"></path></g></symbol>
+<symbol id="logo-facebook" viewBox="0 0 16 16"><path d="M5.667 16h3.2V7.933h2.266L11.4 5.2H8.867V3.667C8.867 3 9 2.8 9.6 2.8h1.733V0h-2.2c-2.4 0-3.466 1.067-3.466 3.067V5.2H4v2.733h1.667V16z"></path></symbol>
+<symbol id="logo-rss" viewBox="0 0 16 16"><path d="M0 0v3.2c3.4 0 6.6 1.333 9 3.733 2.4 2.4 3.733 5.6 3.733 9.067H16C16 7.2 8.8 0 0 0zM2.2 11.666c-1.2 0-2.2 1-2.2 2.2C0 15.066 1 16 2.2 16c1.2 0 2.2-1 2.2-2.2-.067-1.134-1.067-2.134-2.2-2.134z"></path><path d="M0 5.467v3.2C4.067 8.733 7.333 12 7.333 16h3.2C10.533 10.2 5.8 5.533 0 5.467z"></path></symbol>
+<symbol id="logo-spectrum" viewBox="0 0 32 32"><path d="M6 14.5A1.5 1.5 0 0 0 7.5 16H9a7 7 0 0 1 7 7v1.5a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5V23c0-9.389-7.611-17-17-17H7.5A1.5 1.5 0 0 0 6 7.5v7z"></path></symbol>
+<symbol id="logo-twitter" viewBox="0 0 16 16"><path d="M0 12.867a9.332 9.332 0 0 0 5 1.466c6.067 0 9.533-5.133 9.333-9.733.667-.466 1.2-1.066 1.667-1.666-.6.266-1.2.466-1.867.533a3.55 3.55 0 0 0 1.467-1.8c-.667.4-1.333.666-2.067.8-.666-.734-1.533-1.134-2.466-1.134-2.134 0-3.667 2-3.2 4-2.734-.133-5.134-1.4-6.734-3.4a3.299 3.299 0 0 0 1 4.4c-.533-.066-1.066-.2-1.466-.4C.6 7.468 1.733 8.867 3.267 9.2c-.467.134-1 .134-1.467.067a3.16 3.16 0 0 0 3.067 2.267A6.726 6.726 0 0 1 0 12.867z"></path></symbol>
+<symbol id="logo-youtube" viewBox="0 0 16 16"><path d="M15.667 4.4c-.2-.667-.734-1.267-1.4-1.4C13 2.667 8 2.667 8 2.667s-5 0-6.267.333c-.666.2-1.2.733-1.4 1.4C0 5.666 0 8.333 0 8.333s0 2.6.333 3.867c.2.667.734 1.267 1.4 1.4C3 13.933 8 13.933 8 13.933s5 0 6.267-.333c.666-.2 1.2-.733 1.4-1.4C16 10.933 16 8.333 16 8.333s0-2.667-.333-3.933zm-9.334 6.266V5.933l4.2 2.4-4.2 2.333z"></path></symbol>
+<symbol id="logo" viewBox="0 0 68 13"><path d="M9.1,9.3c-0.1,1.1-0.5,1.9-1.2,2.5c-0.7,0.6-1.6,0.9-2.8,0.9c-1.3,0-2.3-0.4-3-1.3C1.4,10.5,1,9.4,1,7.9V7.3
+  c0-1,0.2-1.8,0.5-2.5s0.8-1.3,1.4-1.7s1.3-0.6,2.2-0.6c1.1,0,2.1,0.3,2.8,0.9S9,4.9,9.1,6H7c0-0.6-0.2-1.1-0.5-1.4
+  C6.2,4.3,5.7,4.2,5.1,4.2c-0.7,0-1.2,0.2-1.5,0.7S3.1,6.2,3.1,7.2v0.7c0,1.1,0.2,1.9,0.5,2.3C3.9,10.8,4.4,11,5.1,11
+  c0.6,0,1.1-0.1,1.4-0.4C6.8,10.3,7,9.9,7,9.3H9.1z M18.2,9.3c-0.1,1.1-0.5,1.9-1.2,2.5c-0.7,0.6-1.6,0.9-2.8,0.9
+  c-1.3,0-2.3-0.4-3-1.3c-0.7-0.9-1.1-2-1.1-3.5V7.3c0-1,0.2-1.8,0.5-2.5s0.8-1.3,1.4-1.7c0.6-0.4,1.3-0.6,2.2-0.6
+  c1.1,0,2.1,0.3,2.8,0.9C17.7,4,18.1,4.9,18.2,6h-2c0-0.6-0.2-1.1-0.5-1.4c-0.3-0.3-0.8-0.4-1.4-0.4c-0.7,0-1.2,0.2-1.5,0.7
+  c-0.3,0.5-0.5,1.2-0.5,2.3v0.7c0,1.1,0.2,1.9,0.5,2.3c0.3,0.5,0.8,0.7,1.5,0.7c0.6,0,1.1-0.1,1.4-0.4c0.3-0.3,0.5-0.7,0.5-1.3H18.2z
+   M23.2,9.1h-3.8V7.5h3.8V9.1z M28.6,8.9h-1.6v3.6h-2V2.7h3.7c1.2,0,2.1,0.3,2.7,0.8c0.6,0.5,1,1.3,1,2.2c0,0.7-0.1,1.2-0.4,1.7
+  s-0.7,0.8-1.3,1.1l2.1,4v0.1h-2.2L28.6,8.9z M26.9,7.3h1.6c0.5,0,0.9-0.1,1.2-0.4c0.3-0.3,0.4-0.6,0.4-1.1c0-0.5-0.1-0.8-0.4-1.1
+  c-0.3-0.3-0.7-0.4-1.2-0.4h-1.6V7.3z M37,12.7c-1.1,0-2-0.3-2.6-1s-1-1.5-1-2.6V8.9c0-0.7,0.1-1.4,0.4-2c0.3-0.6,0.7-1,1.2-1.3
+  s1.1-0.5,1.8-0.5c1,0,1.8,0.3,2.4,1s0.9,1.5,0.9,2.7v0.8h-4.7c0.1,0.5,0.3,0.9,0.6,1.2c0.3,0.3,0.7,0.4,1.2,0.4
+  c0.8,0,1.3-0.3,1.8-0.8l1,1.1c-0.3,0.4-0.7,0.7-1.2,1C38.2,12.6,37.6,12.7,37,12.7z M36.8,6.6c-0.4,0-0.7,0.1-0.9,0.4
+  c-0.2,0.3-0.4,0.6-0.5,1.1h2.7V8c0-0.4-0.1-0.8-0.4-1C37.5,6.8,37.2,6.6,36.8,6.6z M45.2,10.5c0-0.2-0.1-0.4-0.4-0.6
+  c-0.2-0.1-0.6-0.3-1.1-0.4C41.9,9.2,41,8.5,41,7.3c0-0.7,0.3-1.2,0.8-1.6c0.5-0.4,1.2-0.7,2.1-0.7c0.9,0,1.7,0.2,2.2,0.7
+  c0.6,0.4,0.8,1,0.8,1.7h-2c0-0.3-0.1-0.5-0.3-0.7c-0.2-0.2-0.5-0.3-0.8-0.3c-0.3,0-0.6,0.1-0.8,0.2C43,6.8,42.9,7,42.9,7.3
+  c0,0.2,0.1,0.4,0.3,0.5s0.6,0.2,1,0.3c0.5,0.1,0.9,0.2,1.2,0.3c1,0.4,1.6,1,1.6,2c0,0.7-0.3,1.2-0.9,1.6c-0.6,0.4-1.3,0.6-2.2,0.6
+  c-0.6,0-1.2-0.1-1.6-0.3c-0.5-0.2-0.9-0.5-1.1-0.9c-0.3-0.4-0.4-0.8-0.4-1.2h1.9c0,0.3,0.1,0.6,0.4,0.8c0.2,0.2,0.6,0.3,1,0.3
+  c0.4,0,0.7-0.1,0.9-0.2C45.1,10.9,45.2,10.7,45.2,10.5z M48,8.8c0-0.7,0.1-1.4,0.4-1.9c0.3-0.6,0.7-1,1.2-1.3
+  c0.5-0.3,1.1-0.5,1.8-0.5c1,0,1.8,0.3,2.4,0.9c0.6,0.6,1,1.4,1,2.5l0,0.5c0,1.1-0.3,2-0.9,2.7c-0.6,0.7-1.5,1-2.5,1
+  c-1.1,0-1.9-0.3-2.5-1C48.3,11,48,10.1,48,8.8L48,8.8z M50,8.9c0,0.7,0.1,1.2,0.4,1.6c0.3,0.4,0.6,0.6,1.1,0.6
+  c0.5,0,0.8-0.2,1.1-0.5c0.3-0.4,0.4-0.9,0.4-1.8c0-0.7-0.1-1.2-0.4-1.6c-0.3-0.4-0.6-0.6-1.1-0.6c-0.5,0-0.9,0.2-1.1,0.6
+  C50.1,7.6,50,8.2,50,8.9z M60.6,11.8c-0.5,0.6-1.2,0.9-2,0.9c-0.8,0-1.4-0.2-1.8-0.7c-0.4-0.5-0.6-1.1-0.6-2V5.2h2V10
+  c0,0.8,0.3,1.1,1,1.1c0.7,0,1.1-0.2,1.4-0.7V5.2h2v7.4h-1.8L60.6,11.8z M68.1,7C67.8,7,67.6,7,67.4,7c-0.7,0-1.2,0.3-1.5,0.8v4.8h-2
+  V5.2h1.9l0.1,0.9c0.4-0.7,0.9-1,1.6-1c0.2,0,0.4,0,0.6,0.1L68.1,7z M72,11.1c0.4,0,0.7-0.1,0.9-0.3c0.2-0.2,0.3-0.5,0.4-0.8h1.8
+  c0,0.5-0.1,1-0.4,1.4c-0.3,0.4-0.6,0.7-1.1,1s-1,0.3-1.5,0.3c-1.1,0-1.9-0.3-2.5-1c-0.6-0.7-0.9-1.6-0.9-2.8V8.8
+  c0-1.1,0.3-2,0.9-2.7s1.4-1,2.5-1c0.9,0,1.7,0.3,2.2,0.8c0.6,0.5,0.8,1.2,0.8,2.1h-1.8c0-0.4-0.1-0.7-0.4-0.9
+  c-0.2-0.2-0.5-0.4-0.9-0.4c-0.5,0-0.8,0.2-1,0.5c-0.2,0.3-0.3,0.9-0.3,1.6V9c0,0.8,0.1,1.3,0.3,1.6C71.2,10.9,71.5,11.1,72,11.1z
+   M79.6,12.7c-1.1,0-2-0.3-2.6-1c-0.7-0.7-1-1.5-1-2.6V8.9c0-0.7,0.1-1.4,0.4-2s0.7-1,1.2-1.3s1.1-0.5,1.8-0.5c1,0,1.8,0.3,2.4,1
+  s0.9,1.5,0.9,2.7v0.8h-4.7c0.1,0.5,0.3,0.9,0.6,1.2c0.3,0.3,0.7,0.4,1.2,0.4c0.8,0,1.3-0.3,1.8-0.8l1,1.1c-0.3,0.4-0.7,0.7-1.2,1
+  C80.7,12.6,80.2,12.7,79.6,12.7z M79.3,6.6c-0.4,0-0.7,0.1-0.9,0.4S78,7.7,77.9,8.2h2.7V8c0-0.4-0.1-0.8-0.4-1
+  C80.1,6.8,79.8,6.6,79.3,6.6z"></path></symbol>
+</svg>
+  <svg width="0" height="0" class="visually-hidden">
+    <defs>
+
+      <lineargradient id="orange-to-pink" x1="1" x2="0" y1="1" y2="0">
+        <stop offset="0%" stop-color="#DA1B60"></stop>
+        <stop offset="100%" stop-color="#ff8a00"></stop>
+      </lineargradient>
+
+      <filter id="duotone_orange_pink">
+        <fecolormatrix type="matrix" result="grayscale" values="1 0 0 0 0
+                  1 0 0 0 0
+                  1 0 0 0 0
+                  0 0 0 1 0">
+        </fecolormatrix>
+        <fecomponenttransfer color-interpolation-filters="sRGB" result="duotone">
+          <fefuncr type="table" tableValues="0.7411764706 0.9882352941"></fefuncr>
+          <fefuncg type="table" tableValues="0.0431372549 0.7333333333"></fefuncg>
+          <fefuncb type="table" tableValues="0.568627451 0.05098039216"></fefuncb>
+          <fefunca type="table" tableValues="0 1"></fefunca>
+        </fecomponenttransfer>
+      </filter>
+
+    </defs>
+  </svg>
+
+  <script type="text/javascript">
+/* <![CDATA[ */
+var bblpAJAX = {"ajaxurl":"https:\/\/css-tricks.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script src="{{ url_for('static', filename='communityCSS-Tricks_files/scripts.min.js.download') }}"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"https:\/\/css-tricks.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"0","show_fading":"1"};
+/* ]]> */
+</script>
+<script src="{{ url_for('static', filename='communityCSS-Tricks_files/polls-js.js.download') }}"></script>
+<script src="{{ url_for('static', filename='communityCSS-Tricks_files/search-widget.js.download') }}"></script>
+<script src="{{ url_for('static', filename='communityCSS-Tricks_files/wp-embed.min.js.download') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='communityCSS-Tricks_files/e-201909.js.download') }}" async="async" defer="defer"></script>
+<script type="text/javascript">
+  _stq = window._stq || [];
+  _stq.push([ 'view', {v:'ext',j:'1:7.0.1',blog:'45537868',post:'0',tz:'-7',srv:'css-tricks.com'} ]);
+  _stq.push([ 'clickTrackerInit', '45537868', '0' ]);
+</script>
+
+
+<script src="{{ url_for('static', filename='community/CSS-Tricks_files/global-concat.min.js.download') }}">
+</script>
+
+
+
+
+
+
+
+
+
+  <script async="" src="{{ url_for('static', filename='community/CSS-Tricks_files/ei.js.download') }}"></script>
+
+
+
+
+
+<img src="./CSS-Tricks_files/g.gif" alt=":)" width="6" height="5" id="wpstats"></body></html>

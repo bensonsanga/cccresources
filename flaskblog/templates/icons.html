@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="all-site-wrap" id="all-site-wrap">
+        <circle-text r="90" class="circle-text-jobs">
+          What? More Work? What? More Work? What? More Work?
+        </circle-text>
+
+        <header class="page-header" id="maincontent">
+
+          <h1>
+            Project Board  </h1>
+
+          <p class="page-intro-p bold-underline-links">
+            Projects for Front-End Developers and Designers.
+            <br><br><a href="https://codepen.io/job/new/">Post One!</a>
+          </p>
+
+          <svg viewBox="0 0 100 20" class="header-line-only">
+          <path d="M 0 20 L 90 20 Q 100 20 100 10 L 100 0">
+        </svg>
+
+        </header>
+
+        <div class="page-wrap page-wrap-max-width">
+
+          <main class="jobs-main-wrap">
+
+            <div id="jobs" class="">
+                <div class="job ">
+                  <h3 class="job-title-and-company">
+                    <a href="https://codepen.io/url/job/ZgoVoZ">
+                      <div class="job-company">
+                        First year Project
+                      </div>
+                      <div class="job-title">
+                        Second year architecture student
+                      </div>
+                    </a>
+                  </h3>
+
+                  <div class="job-type">
+                    Type
+                    <div class="job-term">
+                      full
+                    </div>
+                  </div>
+
+                  <div class="job-location">
+                    Location
+                    <br>
+                    <div class="job-address">
+                      New York, NY
+                    </div>
+                  </div>
+
+                  <div class="job-link">
+                    <a href="https://codepen.io/url/job/ZgoVoZ" class="button button-small">
+                      Job Post →
+                    </a>
+                  </div>
+
+        </div>
+            </div>
+
+            <div class="post-a-job">
+              <a href="{{ url_for('main.new_project') }}" class="button">Post a Project</a>
+              <br><br>
+              ... over on the <a href="https://codepen.io/Projects/">CC-Resources Project Board</a>, which places the job here and on <a href="https://shoptalkshow.com/jobs">CC-Resources</a>.
+            </div>
+
+          </main>
+
+        </div>
+
+  </div>
+{% endblock content %}

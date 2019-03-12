@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+{% block content %}
+    <header class="page-header" id="maincontent">
+      <div class="subhead">The CSS-Tricks Newsletter</div>
+      <h1>
+        ✨ This Week in<br>Design and Visualization
+      </h1>
+
+      <svg viewBox="0 0 100 20" class="header-line-only">
+      <path d="M 0 20 L 90 20 Q 100 20 100 10 L 100 0">
+    </svg>
+
+    </header>
+
+    <div class="newsletters-wrap page-wrap-max-width">
+
+      <div class="newsletters-wrap-left">
+
+        <p>Ever wonder to yourself: how do I stay up to date with all the new stuff in this fast-moving industry? We hope our newsletter is part of an answer to that for you.</p>
+
+        <p>We hand-craft this newsletter every week to include the most interesting and relevant news and information published that week both on CSS-Tricks and off.</p>
+
+        <h3>
+          <svg viewBox="0 0 40 40" width="100%" height="100%"><path d="M35 39H5c-2.2 0-4-1.8-4-4V19l19 9 19-9v16c0 2.2-1.8 4-4 4zM2 38l12-13M38 38L26 25M33.2 15l5.8 4M1 19l5.8-4"></path><path d="M7 22V5c0-2.2 1.8-4 4-4h18c2.2 0 4 1.8 4 4v17"></path><path d="M26 13c0 3.3-2.7 6-6 6s-6-2.7-6-6"></path></svg>
+          Subscribe to the newsletter
+        </h3>
+
+        <div id="footer-form-wrap">
+
+      <form action="https://chriscoyier.us2.list-manage.com/subscribe/post?u=155f5a9ccc4e24c318130cace&amp;id=197f127a68" method="post" id="mc-embedded-subscribe-form">
+
+        <div class="subwrap">
+          <div class="inner-sub">
+            <div class="submarine">
+              <div class="porthole"></div>
+              <div class="porthole"></div>
+              <div class="fin"></div>
+              <div class="fin lower"></div>
+              <div class="periscope"></div>
+              <div class="prop"></div>
+              <label for="mce-EMAIL" class="screen-reader">Email Address</label>
+              <input type="email" name="EMAIL" class="required email mailchimp-email-input" id="mce-EMAIL" placeholder="lovetricks@internet.cool" required="">
+              <div class="inner"></div>
+            </div>
+
+            <div class="btnwrap">
+              <b>
+                <span>Subscribe</span>
+              </b>
+              <input type="submit" value="Subscribe" name="Subscribe" id="mc-embedded-subscribe" class="button subscribe-button">
+            </div>
+
+          </div>
+        </div>
+      </form>
+    </div>
+      </div>
+
+      <div class="newsletters-wrap-right">
+
+        <div class="newsletter-issues">
+          <nav id="newsletters-nav" class="newsletters-nav">
+            <label for="newsletter-select">Choose an issue #</label>
+            <select id="newsletter-select" class="custom-select">
+                      <option value="/newsletter/136" data-newsletter-id="283996">
+                136          </option>
+                      <option value="/newsletter/135" data-newsletter-id="283225">
+                135          </option>
+                      <option value="/newsletter/134" data-newsletter-id="283082">
+                134          </option>
+                      <option value="/newsletter/133" data-newsletter-id="282933">
+                133          </option>
+                      <option value="/newsletter/132" data-newsletter-id="282269">
+                132          </option>
+                      <option value="/newsletter/131" data-newsletter-id="282268">
+                131          </option>
+                      <option value="/newsletter/130" data-newsletter-id="281644">
+                130          </option>
+                      <option value="/newsletter/129" data-newsletter-id="281395">
+                129          </option>
+                      <option value="/newsletter/128" data-newsletter-id="281047">
+                128          </option>
+                      <option value="/newsletter/127" data-newsletter-id="280520">
+                127          </option>
+                      <option value="/newsletter/126" data-newsletter-id="280288">
+                    </select>
+          </nav>
+        </div>
+
+        <div class="fake-phone">
+          <div class="fake-phone-iframe-wrap" id="fake-phone-iframe-wrap">
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+{% endblock content %}

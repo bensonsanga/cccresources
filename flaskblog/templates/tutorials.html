@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="all-site-wrap" id="all-site-wrap">
+        <circle-text r="70" class="circle-text-videos">
+          Watch & Learn & Watch & Learn & Watch
+        </circle-text>
+
+        <svg width="624" height="443" viewBox="0 0 624 443" xmlns="http://www.w3.org/2000/svg" class="blob-top-right">
+        <path d="M260 -0.99952C160.589 -0.999515 80 79.5892 80 179.001C80 278.412 160.589 359.001 260 359.001L624 359L624 -0.999535L260 -0.99952Z" fill="url(#orange-to-pink)" />
+        </svg>
+        <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" class="blob-circle">
+          <circle cx="250" cy="250" r="250" fill="url(#orange-to-pink)" />
+        </svg>
+        <svg width="250" height="250" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" class="blob-circle-small">
+          <circle cx="250" cy="250" r="250" />
+        </svg>
+
+        <header class="page-header" id="maincontent">
+
+          <h1>Video Tutorials</h1>
+
+          <blockquote class="page-intro-p"><span>I found I could say things with color and shapes that I couldn’t say any other way – things I had no words for.</span><cite>&mdash; <a href="https://quotesondesign.com/georgia-okeeffe/">Georgia O'Keeffe</a></cite></blockquote>
+
+          <svg viewBox="0 0 100 20" class="header-line-only">
+          <path d="M 0 20 L 90 20 Q 100 20 100 10 L 100 0">
+        </svg>
+
+        </header>
+
+        <div class="page-wrap page-wrap-max-width">
+
+          <div class="video-grid">
+
+
+              <article class="video-module">
+
+          <div class="video-info">
+            <h2>
+
+
+              <a href="{{ url_for('main.tutorial001') }}">
+                <span>
+                  <span class="video-number">
+                    #001          </span>
+                   How to change backgrounds of plans by photoshop</span>
+                <span class="watch-video-button">
+                  <svg class="icon-play" width="35px" height="35px">
+                    <use xlink:href="#icon-play"></use>
+                  </svg>
+                  <div>
+                    <strong>Watch the video</strong>
+                    <time>Running Time: <span>43:07</span></time>
+                  </div>
+                </span>
+                <div class="video-thumb">
+                  <img class="video-thumbnail" src="https://i.ytimg.com/vi/pxNrUg7t0Mg/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBSKMkNKAnPCjbNKxeIYIiq0tunIQ" alt="Cganging back grounds">
+                </div>
+              </a>
+            </h2>
+
+            <div class="video-description">
+              <p>This is video is about architecture presentations </p>
+        <blockquote><p>Lets take a look at how one can change the normal background of plans to a more interesting one</p></blockquote>&hellip; <a href="{{ url_for('main.tutorial001') }}" class="read-more">Learn More</a>    </div>
+          </div>
+        </article>
+        </div>
+
+        <div class="post-a-job">
+          <a href="{{ url_for('main.tutorial001') }}" class="button">New Tutorial</a>
+          <br><br>
+          ... over on the <a href="https://codepen.io/Projects/">CC-Resources tutorial Board</a>, which places the tutorial here and on <a href="https://shoptalkshow.com/jobs">CC-Resources</a>.
+        </div>
+{% endblock content %}
