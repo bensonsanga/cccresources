@@ -80,3 +80,8 @@ def maps():
 @main.route("/map1")
 def map1():
     return render_template('map.html', title='Brzezin')
+
+
+@main.route("/map2")
+def map2():
+    return render_template('map2.html', title='lodz botanic garden')
