@@ -85,3 +85,12 @@ def map1():
 @main.route("/map2")
 def map2():
     return render_template('map2.html', title='lodz botanic garden')
+
+
+@main.route("/sketchmap")
+def sketchmap():
+    return render_template('sketchmap.html', title='Map Sketch')
+
+@main.route("/map3d")
+def map3d():
+    return render_template('map3d.html', title='Map 3D')
