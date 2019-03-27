@@ -30,7 +30,7 @@ def new_article():
 
 @main.route("/tutorials")
 def tutorials():
-    return render_template('tutorials.html', title='Tutorials')
+    return render_template('tutorials.html', title='Tutorials', videos=videos)
 
 
 @main.route("/tutorial001")
@@ -40,7 +40,7 @@ def tutorial001():
 
 @main.route("/new_tutorials")
 def new_tutorials():
-    return render_template('new_tutorials.html', title='New Tutorial')
+    return render_template('new_tutorials.html', title='New Tutorials')
 
 
 @main.route("/dwg")

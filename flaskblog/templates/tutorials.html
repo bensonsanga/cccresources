@@ -31,8 +31,8 @@
 
           <div class="video-grid">
 
-
-              <article class="video-module">
+          {% for video in videos %}
+          <article class="video-module">
 
           <div class="video-info">
             <h2>
@@ -41,15 +41,15 @@
               <a href="{{ url_for('main.tutorial001') }}">
                 <span>
                   <span class="video-number">
-                    #001          </span>
-                   How to change backgrounds of plans by photoshop</span>
+                    {{ video.number }}          </span>
+                   {{ video.title }}p</span>
                 <span class="watch-video-button">
                   <svg class="icon-play" width="35px" height="35px">
                     <use xlink:href="#icon-play"></use>
                   </svg>
                   <div>
                     <strong>Watch the video</strong>
-                    <time>Running Time: <span>43:07</span></time>
+                    <time>Running Time: <span>{{ video.time }}</span></time>
                   </div>
                 </span>
                 <div class="video-thumb">
@@ -59,10 +59,11 @@
             </h2>
 
             <div class="video-description">
-              <p>This is video is about architecture presentations </p>
-        <blockquote><p>Lets take a look at how one can change the normal background of plans to a more interesting one</p></blockquote>&hellip; <a href="{{ url_for('main.tutorial001') }}" class="read-more">Learn More</a>    </div>
+              <p>{{ video.shortDescription }}</p>
+        <blockquote><p>{{ video.summary }}</p></blockquote>&hellip; <a href="{{ url_for('main.tutorial001') }}" class="read-more">Learn More</a>    </div>
           </div>
         </article>
+        {% endfor %}
         </div>
 
         <div class="post-a-job">
