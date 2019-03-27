@@ -1,5 +1,6 @@
 from flask import render_template, request, Blueprint
 from flaskblog.models import Post
+from .data import *
 
 main = Blueprint('main', __name__)
 
@@ -19,7 +20,7 @@ def about():
 
 @main.route("/entourage")
 def entourage():
-    return render_template('entourage.html', title='Entourage')
+    return render_template('entourage.html', title='Entourage', articles=articles)
 
 
 @main.route("/new_article")
@@ -90,6 +91,7 @@ def map2():
 @main.route("/sketchmap")
 def sketchmap():
     return render_template('sketchmap.html', title='Map Sketch')
+
 
 @main.route("/map3d")
 def map3d():
