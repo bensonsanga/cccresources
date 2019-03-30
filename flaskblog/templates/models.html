@@ -1,101 +1,160 @@
 {% extends "layout.html" %}
 {% block content %}
-    <header class="page-header" id="maincontent">
-      <div class="subhead">The CSS-Tricks Newsletter</div>
-      <h1>
-        ✨ This Week in<br>Design and Visualization
-      </h1>
+    <div class="all-site-wrap" id="all-site-wrap">
+        <circle-text r="70" class="circle-text-videos">
+          Search What you seek
+        </circle-text>
 
-      <svg viewBox="0 0 100 20" class="header-line-only">
-      <path d="M 0 20 L 90 20 Q 100 20 100 10 L 100 0">
-    </svg>
+        <svg width="624" height="443" viewBox="0 0 624 443" xmlns="http://www.w3.org/2000/svg" class="blob-top-right">
+        <path d="M260 -0.99952C160.589 -0.999515 80 79.5892 80 179.001C80 278.412 160.589 359.001 260 359.001L624 359L624 -0.999535L260 -0.99952Z" fill="url(#orange-to-pink)" />
+        </svg>
+        <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" class="blob-circle">
+          <circle cx="250" cy="250" r="250" fill="url(#orange-to-pink)" />
+        </svg>
+        <svg width="250" height="250" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" class="blob-circle-small">
+          <circle cx="250" cy="250" r="250" />
+        </svg>
 
-    </header>
+        <header class="page-header" id="maincontent">
 
-    <div class="newsletters-wrap page-wrap-max-width">
+          <h1>Searching Portals</h1>
 
-      <div class="newsletters-wrap-left">
+          <blockquote class="page-intro-p"><span>Pick one of the categories and search for what you want for your project or just take a look at the quality materials available</span><cite>&mdash; <a href="https://ymcmbennie.github.io/portfolio/">Benson Sanga</a></cite></blockquote>
 
-        <p>Ever wonder to yourself: how do I stay up to date with all the new stuff in this fast-moving industry? We hope our newsletter is part of an answer to that for you.</p>
+          <svg viewBox="0 0 100 20" class="header-line-only">
+          <path d="M 0 20 L 90 20 Q 100 20 100 10 L 100 0">
+        </svg>
 
-        <p>We hand-craft this newsletter every week to include the most interesting and relevant news and information published that week both on CSS-Tricks and off.</p>
+        </header>
 
-        <h3>
-          <svg viewBox="0 0 40 40" width="100%" height="100%"><path d="M35 39H5c-2.2 0-4-1.8-4-4V19l19 9 19-9v16c0 2.2-1.8 4-4 4zM2 38l12-13M38 38L26 25M33.2 15l5.8 4M1 19l5.8-4"></path><path d="M7 22V5c0-2.2 1.8-4 4-4h18c2.2 0 4 1.8 4 4v17"></path><path d="M26 13c0 3.3-2.7 6-6 6s-6-2.7-6-6"></path></svg>
-          Subscribe to the newsletter
-        </h3>
+        <div class="page-wrap page-wrap-max-width">
 
-        <div id="footer-form-wrap">
+          <div class="video-grid">
 
-      <form action="https://chriscoyier.us2.list-manage.com/subscribe/post?u=155f5a9ccc4e24c318130cace&amp;id=197f127a68" method="post" id="mc-embedded-subscribe-form">
 
-        <div class="subwrap">
-          <div class="inner-sub">
-            <div class="submarine">
-              <div class="porthole"></div>
-              <div class="porthole"></div>
-              <div class="fin"></div>
-              <div class="fin lower"></div>
-              <div class="periscope"></div>
-              <div class="prop"></div>
-              <label for="mce-EMAIL" class="screen-reader">Email Address</label>
-              <input type="email" name="EMAIL" class="required email mailchimp-email-input" id="mce-EMAIL" placeholder="lovetricks@internet.cool" required="">
-              <div class="inner"></div>
-            </div>
+          <article class="video-module">
 
-            <div class="btnwrap">
-              <b>
-                <span>Subscribe</span>
-              </b>
-              <input type="submit" value="Subscribe" name="Subscribe" id="mc-embedded-subscribe" class="button subscribe-button">
-            </div>
+          <div class="video-info">
+            <h2>
 
+
+              <a href="{{ url_for('main.tutorial001') }}">
+                <span>
+                  <span class="video-number">
+                    001          </span>
+                   People cutouts</span>
+                <span class="watch-video-button">
+
+                  <div>
+                    <strong>Start Your search</strong>
+                    <time>Last Updated<span>   Mar 2019</span></time>
+                  </div>
+                </span>
+                <div class="video-thumb">
+                  <img class="video-thumbnail" src="https://i.ytimg.com/vi/pxNrUg7t0Mg/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBSKMkNKAnPCjbNKxeIYIiq0tunIQ" alt="Cganging back grounds">
+                </div>
+              </a>
+            </h2>
+
+            <div class="video-description">
+              <p>A collection of 2D cutouts of people in high quality</p>
+        <blockquote><p>Quoted to be the best collection ever. Idk im just filling in the text</p></blockquote>&hellip; <a href="{{ url_for('main.tutorial001') }}" class="read-more">Learn More</a>    </div>
           </div>
-        </div>
-      </form>
-    </div>
-      </div>
+        </article>
+        <article class="video-module">
 
-      <div class="newsletters-wrap-right">
+          <div class="video-info">
+            <h2>
 
-        <div class="newsletter-issues">
-          <nav id="newsletters-nav" class="newsletters-nav">
-            <label for="newsletter-select">Choose an issue #</label>
-            <select id="newsletter-select" class="custom-select">
-                      <option value="/newsletter/136" data-newsletter-id="283996">
-                136          </option>
-                      <option value="/newsletter/135" data-newsletter-id="283225">
-                135          </option>
-                      <option value="/newsletter/134" data-newsletter-id="283082">
-                134          </option>
-                      <option value="/newsletter/133" data-newsletter-id="282933">
-                133          </option>
-                      <option value="/newsletter/132" data-newsletter-id="282269">
-                132          </option>
-                      <option value="/newsletter/131" data-newsletter-id="282268">
-                131          </option>
-                      <option value="/newsletter/130" data-newsletter-id="281644">
-                130          </option>
-                      <option value="/newsletter/129" data-newsletter-id="281395">
-                129          </option>
-                      <option value="/newsletter/128" data-newsletter-id="281047">
-                128          </option>
-                      <option value="/newsletter/127" data-newsletter-id="280520">
-                127          </option>
-                      <option value="/newsletter/126" data-newsletter-id="280288">
-                    </select>
-          </nav>
-        </div>
 
-        <div class="fake-phone">
-          <div class="fake-phone-iframe-wrap" id="fake-phone-iframe-wrap">
+              <a href="{{ url_for('main.tutorial001') }}">
+                <span>
+                  <span class="video-number">
+                    002          </span>
+                   3D Models</span>
+                <span class="watch-video-button">
 
+                  <div>
+                    <strong>Start Your search</strong>
+                    <time>Last Updated<span>   Mar 2019</span></time>
+                  </div>
+                </span>
+                <div class="video-thumb">
+                  <img class="video-thumbnail" src="https://i.ytimg.com/vi/pxNrUg7t0Mg/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBSKMkNKAnPCjbNKxeIYIiq0tunIQ" alt="Cganging back grounds">
+                </div>
+              </a>
+            </h2>
+
+            <div class="video-description">
+              <p>A collection of 2D cutouts of people in high quality</p>
+        <blockquote><p>Quoted to be the best collection ever. Idk im just filling in the text</p></blockquote>&hellip; <a href="{{ url_for('main.tutorial001') }}" class="read-more">Learn More</a>    </div>
           </div>
+        </article>
+        <article class="video-module">
+
+          <div class="video-info">
+            <h2>
+
+
+              <a href="{{ url_for('main.tutorial001') }}">
+                <span>
+                  <span class="video-number">
+                    003          </span>
+                   Graphic Elements</span>
+                <span class="watch-video-button">
+
+                  <div>
+                    <strong>Start Your search</strong>
+                    <time>Last Updated<span>   Mar 2019</span></time>
+                  </div>
+                </span>
+                <div class="video-thumb">
+                  <img class="video-thumbnail" src="https://i.ytimg.com/vi/pxNrUg7t0Mg/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBSKMkNKAnPCjbNKxeIYIiq0tunIQ" alt="Cganging back grounds">
+                </div>
+              </a>
+            </h2>
+
+            <div class="video-description">
+              <p>A collection of 2D cutouts of people in high quality</p>
+        <blockquote><p>Quoted to be the best collection ever. Idk im just filling in the text</p></blockquote>&hellip; <a href="{{ url_for('main.tutorial001') }}" class="read-more">Learn More</a>    </div>
+          </div>
+        </article>
+        <article class="video-module">
+
+          <div class="video-info">
+            <h2>
+
+
+              <a href="{{ url_for('main.tutorial001') }}">
+                <span>
+                  <span class="video-number">
+                    004          </span>
+                  Templates</span>
+                <span class="watch-video-button">
+
+                  <div>
+                    <strong>Start Your search</strong>
+                    <time>Last Updated<span>   Mar 2019</span></time>
+                  </div>
+                </span>
+                <div class="video-thumb">
+                  <img class="video-thumbnail" src="https://i.ytimg.com/vi/pxNrUg7t0Mg/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBSKMkNKAnPCjbNKxeIYIiq0tunIQ" alt="Cganging back grounds">
+                </div>
+              </a>
+            </h2>
+
+            <div class="video-description">
+              <p>A collection of 2D cutouts of people in high quality</p>
+        <blockquote><p>Quoted to be the best collection ever. Idk im just filling in the text</p></blockquote>&hellip; <a href="{{ url_for('main.tutorial001') }}" class="read-more">Learn More</a>    </div>
+          </div>
+        </article>
+
+
         </div>
 
-      </div>
-
-    </div>
-
-  </div>
+        <div class="post-a-job">
+          <a href="{{ url_for('main.tutorial001') }}" class="button">See All</a>
+          <br><br>
+          ... over on the <a href="https://codepen.io/Projects/">CC-Resources tutorial Catalogue</a>, You can see all the objects by name <a href="{{ url_for('main.dwg') }}">Catalogue</a>.
+        </div>
 {% endblock content %}

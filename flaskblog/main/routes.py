@@ -63,6 +63,21 @@ def models():
     return render_template('models.html', title='Models')
 
 
+@main.route("/search")
+def search():
+    return render_template('search.html', title='Search')
+
+
+@main.route("/search1")
+def search1():
+    return render_template('search1.html', title='Search1')
+
+
+@main.route("/search2")
+def search2():
+    return render_template('search2.html', title='Search2')
+
+
 @main.route("/icons")
 def icons():
     return render_template('icons.html', title='Projects')
@@ -86,6 +101,11 @@ def map1():
 @main.route("/map2")
 def map2():
     return render_template('map2.html', title='lodz botanic garden')
+
+
+@main.route("/map3")
+def map3():
+    return render_template('map3.html', title='lodz Piotrkowska Street')
 
 
 @main.route("/sketchmap")

@@ -2,7 +2,7 @@
 {% block content %}
     <div class="all-site-wrap" id="all-site-wrap">
         <circle-text r="70" class="circle-text-videos">
-          Watch & Learn & Watch & Learn & Watch
+          Search What you seek
         </circle-text>
 
         <svg width="624" height="443" viewBox="0 0 624 443" xmlns="http://www.w3.org/2000/svg" class="blob-top-right">
@@ -17,9 +17,9 @@
 
         <header class="page-header" id="maincontent">
 
-          <h1>Video Tutorials</h1>
+          <h1>Searching Portals</h1>
 
-          <blockquote class="page-intro-p"><span>I found I could say things with color and shapes that I couldn’t say any other way – things I had no words for.</span><cite>&mdash; <a href="https://quotesondesign.com/georgia-okeeffe/">Georgia O'Keeffe</a></cite></blockquote>
+          <blockquote class="page-intro-p"><span>Pick one of the categories and search for what you want for your project or just take a look at the quality materials available</span><cite>&mdash; <a href="https://ymcmbennie.github.io/portfolio/">Benson Sanga</a></cite></blockquote>
 
           <svg viewBox="0 0 100 20" class="header-line-only">
           <path d="M 0 20 L 90 20 Q 100 20 100 10 L 100 0">
@@ -31,7 +31,7 @@
 
           <div class="video-grid">
 
-          {% for video in videos %}
+
           <article class="video-module">
 
           <div class="video-info">
@@ -41,15 +41,13 @@
               <a href="{{ url_for('main.tutorial001') }}">
                 <span>
                   <span class="video-number">
-                    {{ video.number }}          </span>
-                   {{ video.title }}</span>
+                    001          </span>
+                   People cutouts</span>
                 <span class="watch-video-button">
-                  <svg class="icon-play" width="35px" height="35px">
-                    <use xlink:href="#icon-play"></use>
-                  </svg>
+
                   <div>
-                    <strong>Watch the video</strong>
-                    <time>Running Time: <span>{{ video.time }}</span></time>
+                    <strong>Start Your search</strong>
+                    <time>Last Updated<span>Mar 2019</span></time>
                   </div>
                 </span>
                 <div class="video-thumb">
@@ -59,16 +57,16 @@
             </h2>
 
             <div class="video-description">
-              <p>{{ video.shortDescription }}</p>
-        <blockquote><p>{{ video.summary }}</p></blockquote>&hellip; <a href="{{ url_for('main.tutorial001') }}" class="read-more">Learn More</a>    </div>
+              <p>A collection of 2D cutouts of people in high quality</p>
+        <blockquote><p>Quoted to be the best collection ever. Idk im just filling in the text</p></blockquote>&hellip; <a href="{{ url_for('main.tutorial001') }}" class="read-more">Learn More</a>    </div>
           </div>
         </article>
-        {% endfor %}
+
         </div>
 
         <div class="post-a-job">
-          <a href="{{ url_for('main.tutorial001') }}" class="button">New Tutorial</a>
+          <a href="{{ url_for('main.tutorial001') }}" class="button">See All</a>
           <br><br>
-          ... over on the <a href="https://codepen.io/Projects/">CC-Resources tutorial Board</a>, which places the tutorial here and on <a href="https://shoptalkshow.com/jobs">CC-Resources</a>.
+          ... over on the <a href="https://codepen.io/Projects/">CC-Resources tutorial Catalogue</a>, You can see all the objects by name <a href="{{ url_for('main.dwg') }}">Catalogue</a>.
         </div>
 {% endblock content %}
