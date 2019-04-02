@@ -116,3 +116,8 @@ def sketchmap():
 @main.route("/map3d")
 def map3d():
     return render_template('map3d.html', title='Map 3D')
+
+
+@main.route("/map4")
+def map4():
+    return render_template('map4.html', title='Piotrkowska Street')
