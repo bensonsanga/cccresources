@@ -113,9 +113,9 @@ def sketchmap():
     return render_template('sketchmap.html', title='Map Sketch')
 
 
-@main.route("/map3d")
-def map3d():
-    return render_template('map3d.html', title='Map 3D')
+@main.route("/map01")
+def map01():
+    return render_template('arcgis/map01.html', title='Map 3D')
 
 
 @main.route("/map4")

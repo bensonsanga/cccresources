@@ -1,0 +1,197 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Adding dynamic models to sites
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.11/"></script>
+  
+  <script>  
+    require([
+      "esri/Map",
+      "esri/views/MapView"
+    ], function(Map, MapView) {
+
+      var map = new Map({
+        basemap: "topo-vector"
+      });
+      
+      var view = new MapView({
+        container: "viewDiv",
+        map: map,
+        center: [51.765092, 19.452480],<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>Import glTF 3D Models - 4.11</title>
+
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.11/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.11/"></script>
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      #paneDiv {
+        padding: 10px;
+        max-width: 200px;
+        background-color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1em;
+      }
+
+      #credits {
+        font-size: 0.7em;
+        line-height: 1.1em;
+      }
+    </style>
+    <script>
+      require([
+        "esri/views/SceneView",
+        "esri/WebScene",
+        "esri/Map",
+        "esri/layers/GraphicsLayer",
+        "esri/widgets/Sketch/SketchViewModel"
+      ], function(SceneView, WebScene, Map, GraphicsLayer, SketchViewModel) {
+        // load web scene from ArcGIS Online
+        const webScene = new WebScene({
+          portalItem: {
+            // autocasts as new PortalItem()
+            id: "e42e9c478d0842058772be9ede760ccd"
+          }
+        });
+
+        const view = new SceneView({
+          container: "viewDiv",
+          map: webScene
+        });
+
+        const graphicsLayer = new GraphicsLayer();
+        view.map.add(graphicsLayer);
+
+        const tentBtn = document.getElementById("tent");
+        const canoeBtn = document.getElementById("canoe");
+
+        view
+          .when(function() {
+            // This sample uses the SketchViewModel to add points to a
+            // GraphicsLayer. The points have 3D glTF models as symbols.
+            const sketchVM = new SketchViewModel({
+              layer: graphicsLayer,
+              view: view
+            });
+
+            tentBtn.addEventListener("click", function() {
+              // reference the relative path to the glTF model
+              // in the resource of an ObjectSymbol3DLayer
+              sketchVM.pointSymbol = {
+                type: "point-3d",
+                symbolLayers: [
+                  {
+                    type: "object",
+                    resource: {
+                      href: "models/scene.gltf"
+                    }
+                  }
+                ]
+              };
+              sketchVM.create("point");
+              deactivateButtons();
+              this.classList.add("esri-button--secondary");
+            });
+
+            canoeBtn.addEventListener("click", function() {
+              // reference the relative path to the glTF model
+              // in the resource of an ObjectSymbol3DLayer
+              sketchVM.pointSymbol = {
+                type: "point-3d",
+                symbolLayers: [
+                  {
+                    type: "object",
+                    resource: {
+                      href: "models/benad.glb"
+                    }
+                  }
+                ]
+              };
+              deactivateButtons();
+              sketchVM.create("point");
+              this.classList.add("esri-button--secondary");
+            });
+
+            sketchVM.on("create", function(event) {
+              if (event.state === "complete") {
+                sketchVM.update(event.graphic);
+                deactivateButtons();
+              }
+            });
+          })
+          .catch(console.error);
+
+        function deactivateButtons() {
+          const elements = Array.prototype.slice.call(
+            document.getElementsByClassName("esri-button")
+          );
+          elements.forEach(function(element) {
+            element.classList.remove("esri-button--secondary");
+          });
+        }
+
+        view.ui.add("paneDiv", "top-right");
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="viewDiv"></div>
+    <div id="paneDiv" class="esri-widget">
+      <h2>BensonAD Design</h2>
+      <p>Select a model and place it Scene</p>
+      <button id="tent" class="esri-button">Design 01</button><br />
+      <button id="canoe" class="esri-button">Design 02</button>
+      <p id="credits">
+        All models and design are made by 
+        <a href="https://ymcmbennie.github.io/portfolio/" target="_blank"
+          >BensonAD </a
+        >
+        under
+        <a
+          href="http://ccresources.herokuapp.com"
+          target="_blank"
+          >CC-Resources Management</a
+        >.
+      </p>
+    </div>
+  </body>
+</html>
+
+        zoom: 11
+      });
+      
+    });
+  </script>
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
