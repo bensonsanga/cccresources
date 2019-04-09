@@ -1,0 +1,25 @@
+<head>
+  <link href="https://cdn.osmbuildings.org/4.0.0/OSMBuildings.css" rel="stylesheet">
+  <script src="https://cdn.osmbuildings.org/4.0.0/OSMBuildings.js"></script>
+</head>
+
+<body>
+  <div id="map"></div>
+  <script type="text/javascript">
+      var osmb = new OSMBuildings({
+    container: 'map',
+    position: { latitude: 51.765029, longitude: 19.452172 },
+    zoom: 18,
+    minZoom: 15,
+    maxZoom: 22
+  });
+
+  osmb.addMapTiles(
+    'https://{s}.tiles.mapbox.com/v3/osmbuildings.kbpalbpk/{z}/{x}/{y}.png',
+    {
+      attribution: '© Data <a href="http://openstreetmap.org/copyright/">OpenStreetMap</a> · © Map <a href="http://mapbox.com">Mapbox</a>'
+    }
+  );
+
+  osmb.addGeoJSONTiles('http://{s}.data.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json');
+  </script>

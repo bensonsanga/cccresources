@@ -32,6 +32,7 @@
 
       .esri-button {
         margin: 2px;
+        background-color: grey;
       }
     </style>
     <script>
@@ -67,6 +68,7 @@
           }
         });
 
+        const height = 10;
         const grey = [77, 77, 77, 0.9];
         const white = [255, 255, 255, 0.8];
 
@@ -76,7 +78,7 @@
           symbolLayers: [
             {
               type: "extrude",
-              size: 10, // extrude by 10 meters
+              size: height, // extrude by 10 meters
               material: {
                 color: white
               },
@@ -179,6 +181,11 @@
 
         view.ui.add("sketchPanel", "top-right");
       });
+
+      function changeheight(newVal){
+          height = newVal;
+          console.log(height);
+        };
     </script>
   </head>
 
