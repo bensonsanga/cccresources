@@ -53,7 +53,7 @@
         const gLayer = new GraphicsLayer();
 
         const map = new Map({
-          basemap: "satellite",
+          basemap: "streets",
           layers: [gLayer],
           ground: "world-elevation"
         });
@@ -62,9 +62,7 @@
           container: "viewDiv",
           map: map,
           camera: {
-            position: [19.452024, 51.765033, 2073.31548],
-            heading: 226.79,
-            tilt: 88.35
+            position: [19.452024, 51.765033, 2073.31548]
           }
         });
 
