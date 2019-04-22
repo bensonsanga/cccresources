@@ -126,3 +126,8 @@ def map01():
 @main.route("/map4")
 def map4():
     return render_template('map4.html', title='Piotrkowska Street')
+
+
+@main.route("/map5")
+def map5():
+    return render_template('map5.html', title='Lodz Map of Murals')
