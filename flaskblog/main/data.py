@@ -141,3 +141,36 @@ videos = [
         'number': '#001'
     }
 ]
+#Data for gh scripts
+gh_scripts = [
+    {   
+        'proj_id' : 1,
+        'name': 'Benson_Sanga',
+        'author': 'Benson Sanga',
+        'imgs': ['1.png', '2.png', '3.png'],
+        'title': 'Introduction to Rhino 6 Grasshopper in 2019',
+        'content': 'First post content',
+        'time': '43:07',
+        'shortDescription': 'This is video is about architecture presentations amd how you can use data to visulize different design decisions and come up with interesting design off the bat',
+        'type': 'Grasshopper',
+        'file': 'Gh',
+        'skill': 'beginner',
+        'summary': 'Lets take a look at how one can change the normal background of plans to a more interesting one',
+        'number': '#001'
+    },
+    {
+        'proj_id' : 2,
+        'name': 'Benson_Sanga1',
+        'author': 'Benson Sanga',
+        'imgs': ['1.png', '2.png', '3.png'],
+        'title': 'Introduction to Rhino 6 Grasshopper in 2019',
+        'content': 'First post content',
+        'time': '43:07',
+        'shortDescription': 'This is video is about architecture presentations amd how you can use data to visulize different design decisions and come up with interesting design off the bat',
+        'type': 'Grasshopper',
+        'file': 'Gh',
+        'skill': 'beginner',
+        'summary': 'Lets take a look at how one can change the normal background of plans to a more interesting one',
+        'number': '#002'
+    }
+]

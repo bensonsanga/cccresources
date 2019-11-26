@@ -132,7 +132,7 @@ def map4():
 def map5():
     return render_template('map5.html', title='Lodz Map of Murals')
 
-@main.route("/projectshow")
-def projectshow():
-    return render_template('projectshow.html', title='projectshow', articles=articles)
-
+@main.route("/projectshow/<int:proj_id1>")
+def projectshow(proj_id1):
+    project = next((x for x in gh_scripts if x["proj_id"] == proj_id1), None)
+    return render_template('projectshow.html', title='projectshow', project=project)
