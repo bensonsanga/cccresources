@@ -39,7 +39,7 @@ Pillow==5.4.1
 CairoSVG==2.3.0
 certifi==2018.11.29
 chardet==3.0.4
-pipenv==2018.11.26
+pipenv==2022.1.8
 pycparser==2.19
 pylint==2.2.2
 Pyphen==0.9.5
